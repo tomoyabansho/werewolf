@@ -42,4 +42,7 @@ dependencies {
     // view model
     implementation "android.arch.lifecycle:extensions:$rootProject.lifecycle"
     annotationProcessor "android.arch.lifecycle:compiler:$rootProject.lifecycle"
+
+    //Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 }
