@@ -31,7 +31,7 @@ class NewsFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentNewsBinding>(inflater, R.layout.fragment_news, container, false)
 
         binding.setLifecycleOwner(this)
-        binding.model = model
+        binding.newsModel = model
 
         return binding.root
     }

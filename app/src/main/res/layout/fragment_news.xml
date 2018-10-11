@@ -5,7 +5,7 @@
     <data>
 
         <variable
-            name="model"
+            name="newsModel"
             type="jp.co.seesaa.intern.werewolf.model.NewsModel" />
     </data>
 
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="32dp"
-            bind:news="@{model.news}" />
+            bind:news="@{newsModel.news}" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>
