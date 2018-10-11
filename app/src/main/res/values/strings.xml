@@ -4,4 +4,7 @@
     <string name="tab_name_news">新着情報</string>
     <string name="tab_name_status">ステータス</string>
     <string name="tab_name_preference">設定</string>
+    <string name="test_message">Lorem ipsum dolor sit amet</string>
+    <string name="news_title_message">Lorem</string>
+    <string name="news_subscription_message">Lorem ipsum dolor sit amet</string>
 </resources>
