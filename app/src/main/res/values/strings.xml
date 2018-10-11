@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Werewolf</string>
+    <string name="start_button_text">人狼ゲームを始める</string>
+    <string name="tab_name_news">新着情報</string>
+    <string name="tab_name_status">ステータス</string>
+    <string name="tab_name_preference">設定</string>
 </resources>
