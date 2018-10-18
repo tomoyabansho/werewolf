@@ -13,4 +13,7 @@
     <string name="preference_test_name">Elisa</string>
     <string name="preference_test_id">b90aa065–6d8e-41df-887c-031233142edd</string>
     <string name="preference_hint_message">ユーザー情報を変更することができます。</string>
+    <string name="status_battles_text">勝負</string>
+    <string name="status_wins_text">勝利</string>
+    <string name="status_loses_text">敗北</string>
 </resources>

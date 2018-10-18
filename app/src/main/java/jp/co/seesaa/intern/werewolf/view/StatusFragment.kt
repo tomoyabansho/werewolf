@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import jp.co.seesaa.intern.werewolf.R
+import jp.co.seesaa.intern.werewolf.data.UserData
 import jp.co.seesaa.intern.werewolf.databinding.FragmentStatusBinding
 import jp.co.seesaa.intern.werewolf.model.StatusModel
 
@@ -17,6 +18,7 @@ class StatusFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         model = ViewModelProviders.of(this).get(StatusModel::class.java)
+        model.data.postValue(UserData(getString(R.string.preference_test_id), getString(R.string.preference_test_name), 5, 2, 3))
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
