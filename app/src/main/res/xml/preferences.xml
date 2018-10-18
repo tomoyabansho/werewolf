@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="name"
+        android:summary="@string/preference_fragment_player_name_text"
+        android:title="@string/preference_fragment_player_name_description" />
+</PreferenceScreen>

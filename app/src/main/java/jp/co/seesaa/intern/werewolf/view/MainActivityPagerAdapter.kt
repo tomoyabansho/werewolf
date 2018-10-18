@@ -13,8 +13,8 @@ class MainActivityPagerAdapter(fm: FragmentManager, val titles: Array<String>) :
 
     override fun getItem(position: Int) = when (position) {
         0 -> NewsFragment()
-        1 -> PreferenceFragment()
-        2 -> StatusFragment()
+        1 -> StatusFragment()
+        2 -> SettingsFragment()
         else -> {
             Timber.d("unreachable value: $position")
             null
