@@ -6,6 +6,6 @@
     <string name="tab_name_preference">設定</string>
     <string name="test_message">Lorem ipsum dolor sit amet</string>
     <string name="news_title_message">Thanks!</string>
-    <string name="news_subscription_message">ダウンロードしていただき、ありがとうございました！</string>
+    <string name="news_subscription_message">ダウンロードしていただき、ありがとうございました！ 人狼ゲームを楽しんでくださいね！！</string>
     <string name="dummy_image_src">http://i.imgur.com/DvpvklR.png</string>
 </resources>
