@@ -8,4 +8,9 @@
     <string name="news_title_message">Thanks!</string>
     <string name="news_subscription_message">ダウンロードしていただき、ありがとうございました！ 人狼ゲームを楽しんでくださいね！！</string>
     <string name="dummy_image_src">http://i.imgur.com/DvpvklR.png</string>
+    <string name="preference_fragment_player_name_text">プレイヤー名</string>
+    <string name="preference_fragment_player_name_description">プレイヤーの名前を変更します。</string>
+    <string name="preference_test_name">Elisa</string>
+    <string name="preference_test_id">b90aa065–6d8e-41df-887c-031233142edd</string>
+    <string name="preference_hint_message">ユーザー情報を変更することができます。</string>
 </resources>
