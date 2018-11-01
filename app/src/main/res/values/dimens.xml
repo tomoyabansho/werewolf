@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="news_title_text_size">16sp</dimen>
-    <dimen name="news_description_text_size">12sp</dimen>
+    <dimen name="textSubViewPrimary">16sp</dimen>
+    <dimen name="textSubViewSubPrimary">12sp</dimen>
     <dimen name="preference_hint">18sp</dimen>
     <dimen name="preference_edit">24sp</dimen>
     <dimen name="textPrimary">24sp</dimen>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="jp.co.seesaa.intern.werewolf.data.UserData" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toTopOf="@id/status"
+                app:layout_constraintEnd_toStartOf="@id/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_weight="0.4" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@{data.name}"
+                android:textSize="@dimen/textPrimary"
+                app:layout_constraintBottom_toBottomOf="@id/icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                app:layout_constraintTop_toTopOf="@id/icon" />
+
+            <LinearLayout
+                android:id="@+id/status"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon"
+                app:layout_constraintVertical_weight="0.6">
+
+                <include
+                    android:id="@+id/battles"
+                    layout="@layout/item_status_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    bind:tag="@{@string/status_battles_text}"
+                    bind:value="@{Integer.toString(data.battles)}" />
+
+                <include
+                    android:id="@+id/wins"
+                    layout="@layout/item_status_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    bind:tag="@{@string/status_wins_text}"
+                    bind:value="@{Integer.toString(data.wins)}" />
+
+                <include
+                    android:id="@+id/loses"
+                    layout="@layout/item_status_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    bind:tag="@{@string/status_loses_text}"
+                    bind:value="@{Integer.toString(data.loses)}" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</layout>
