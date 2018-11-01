@@ -23,6 +23,7 @@
                 android:id="@+id/icon"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:contentDescription="@string/test_message"
                 android:src="@drawable/ic_launcher_background"
                 app:layout_constraintBottom_toTopOf="@id/status"
                 app:layout_constraintEnd_toStartOf="@id/name"
