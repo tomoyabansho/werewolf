@@ -6,7 +6,7 @@
 
         <variable
             name="newsModel"
-            type="jp.co.seesaa.intern.werewolf.model.NewsModel" />
+            type="jp.co.seesaa.intern.werewolf.model.main.NewsModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout

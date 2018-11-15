@@ -19,5 +19,6 @@
     <string name="preference_change_color_message">色の変更</string>
     <string name="preference_change_color_hint_message">ツールバーの色を変更することができます</string>
     <string name="title_activity_game">GameActivity</string>
+    <string name="select_room_message">ルームを選んでください</string>
 
 </resources>

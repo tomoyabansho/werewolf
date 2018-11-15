@@ -11,7 +11,7 @@ import android.view.View
 import com.bigkoo.alertview.AlertView
 import jp.co.seesaa.intern.werewolf.R
 import jp.co.seesaa.intern.werewolf.databinding.ActivityMainBinding
-import jp.co.seesaa.intern.werewolf.model.StatusModel
+import jp.co.seesaa.intern.werewolf.model.main.StatusModel
 import jp.co.seesaa.intern.werewolf.view.game.GameActivity
 import kotlinx.android.synthetic.main.activity_main.*
 

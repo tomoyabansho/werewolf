@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import jp.co.seesaa.intern.werewolf.R
 import jp.co.seesaa.intern.werewolf.data.UserData
 import jp.co.seesaa.intern.werewolf.databinding.FragmentStatusBinding
-import jp.co.seesaa.intern.werewolf.model.StatusModel
+import jp.co.seesaa.intern.werewolf.model.main.StatusModel
 
 class StatusFragment : Fragment() {
     lateinit var model: StatusModel

@@ -6,7 +6,7 @@
 
         <variable
             name="statusModel"
-            type="jp.co.seesaa.intern.werewolf.model.StatusModel" />
+            type="jp.co.seesaa.intern.werewolf.model.main.StatusModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout

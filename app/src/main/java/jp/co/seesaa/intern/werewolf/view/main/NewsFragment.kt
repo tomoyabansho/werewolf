@@ -12,7 +12,7 @@ import jp.co.seesaa.intern.werewolf.R
 import jp.co.seesaa.intern.werewolf.R.string.*
 import jp.co.seesaa.intern.werewolf.data.News
 import jp.co.seesaa.intern.werewolf.databinding.FragmentNewsBinding
-import jp.co.seesaa.intern.werewolf.model.NewsModel
+import jp.co.seesaa.intern.werewolf.model.main.NewsModel
 
 class NewsFragment : Fragment() {
 

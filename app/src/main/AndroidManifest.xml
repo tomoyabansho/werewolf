@@ -22,7 +22,7 @@
         <activity
             android:name=".view.game.GameActivity"
             android:label="@string/title_activity_game"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
