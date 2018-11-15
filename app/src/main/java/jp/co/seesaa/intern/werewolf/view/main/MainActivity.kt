@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
         AlertView.Builder()
                 .setContext(this)
                 .setStyle(AlertView.Style.Alert)
-                .setTitle("ゲームをプレイしますか？")
-                .setCancelText("いいえ")
-                .setDestructive("はい")
+                .setTitle(getString(R.string.confirm_play_game))
+                .setCancelText(getString(R.string.confirm_player_game_no))
+                .setDestructive(getString(R.string.confirm_player_game_ok))
                 .setOnItemClickListener { _, position ->
                     when (position) {
                         OK -> this.transitionGameScene()
