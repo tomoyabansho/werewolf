@@ -21,7 +21,6 @@ class NewsFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         model = ViewModelProviders.of(this).get(NewsModel::class.java)
-
         model.news.postValue(News(getString(news_title_message), getString(news_subscription_message), getString(dummy_image_src)))
     }
 
