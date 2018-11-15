@@ -7,6 +7,7 @@ import jp.co.seesaa.intern.werewolf.R
 import jp.co.seesaa.intern.werewolf.data.UserData
 import jp.co.seesaa.intern.werewolf.databinding.ActivityGameBinding
 import jp.co.seesaa.intern.werewolf.view.main.MainActivity
+import kotlinx.android.synthetic.main.activity_game.*
 
 class GameActivity : AppCompatActivity() {
 
@@ -14,6 +15,9 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityGameBinding>(this, R.layout.activity_game)
         val userData = intent.getSerializableExtra(MainActivity.KEY_USERDATA) as UserData
+
+        pager.adapter = GameActivityPagerAdapter(supportFragmentManager)
+
         binding.activity = this
     }
 
