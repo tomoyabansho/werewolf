@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,8 +18,9 @@ class StatusFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        model = ViewModelProviders.of(this).get(StatusModel::class.java)
-        model.data.postValue(UserData(getString(R.string.preference_test_id), getString(R.string.preference_test_name), 5, 2, 3))
+        val activity = this.activity as FragmentActivity
+        this.model = ViewModelProviders.of(activity).get(StatusModel::class.java)
+        this.model.data.postValue(UserData(getString(R.string.preference_test_id), getString(R.string.preference_test_name), 5, 2, 3))
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

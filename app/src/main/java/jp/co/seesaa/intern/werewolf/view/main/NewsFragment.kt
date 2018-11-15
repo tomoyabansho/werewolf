@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,8 +21,9 @@ class NewsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        model = ViewModelProviders.of(this).get(NewsModel::class.java)
-        model.news.postValue(News(getString(news_title_message), getString(news_subscription_message), getString(dummy_image_src)))
+        val activity = this.activity as FragmentActivity
+        this.model = ViewModelProviders.of(activity).get(NewsModel::class.java)
+        this.model.news.postValue(News(getString(news_title_message), getString(news_subscription_message), getString(dummy_image_src)))
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

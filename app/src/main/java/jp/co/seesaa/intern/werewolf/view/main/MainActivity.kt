@@ -1,19 +1,24 @@
 package jp.co.seesaa.intern.werewolf.view.main
 
+import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.design.widget.TabLayout
+import android.support.v4.app.FragmentActivity
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.Toast
 import com.bigkoo.alertview.AlertView
 import jp.co.seesaa.intern.werewolf.R
 import jp.co.seesaa.intern.werewolf.databinding.ActivityMainBinding
+import jp.co.seesaa.intern.werewolf.model.StatusModel
+import jp.co.seesaa.intern.werewolf.view.game.GameActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     companion object {
         const val OK = 0
+        const val KEY_USERDATA = "key user data"
     }
 
     val showToastListener = View.OnClickListener {
@@ -25,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 .setDestructive("はい")
                 .setOnItemClickListener { _, position ->
                     when (position) {
-                        OK -> Toast.makeText(this, "play game!", Toast.LENGTH_SHORT).show()
+                        OK -> this.transitionGameScene()
                     }
                 }
                 .build()
@@ -44,5 +49,13 @@ class MainActivity : AppCompatActivity() {
         pager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabs))
         tabs.setupWithViewPager(pager)
         binding.activity = this
+    }
+
+    private fun transitionGameScene() {
+        val activity = this as FragmentActivity
+        val model = ViewModelProviders.of(activity).get(StatusModel::class.java)
+        val intent = Intent(this, GameActivity::class.java)
+        intent.putExtra(MainActivity.KEY_USERDATA, model.data.value)
+        this.startActivity(intent)
     }
 }
