@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
+import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ class SelectRoomFragment : Fragment() {
 
         val activity = this.activity as FragmentActivity
         this.model = ViewModelProviders.of(activity).get(SelectRoomFragmentModel::class.java)
+        this.model.connectToServer()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -27,8 +29,10 @@ class SelectRoomFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentSelectRoomBinding>(inflater, R.layout.fragment_select_room, container, false)
         binding.model = this.model
         val context = this.context
-        if (context != null) {
-            binding.rooms.adapter = RoomListAdapter(context, this.model)
+        val array = this.model.roomDatas
+        if (context != null && array != null) {
+            binding.rooms.adapter = RoomListAdapter(context, array)
+            binding.rooms.layoutManager = LinearLayoutManager(context)
         }
         return binding.root
     }

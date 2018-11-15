@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import jp.co.seesaa.intern.werewolf.R
-import jp.co.seesaa.intern.werewolf.model.game.SelectRoomFragmentModel
+import jp.co.seesaa.intern.werewolf.data.RoomData
 import kotlinx.android.synthetic.main.item_room_list.view.*
+import timber.log.Timber
 
-class RoomListAdapter(private val context: Context, private val model: SelectRoomFragmentModel)
+class RoomListAdapter(context: Context, private val array: List<RoomData>)
     : RecyclerView.Adapter<RoomListAdapter.RoomListViewHolder>() {
 
     val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -20,13 +21,13 @@ class RoomListAdapter(private val context: Context, private val model: SelectRoo
     }
 
     override fun getItemCount(): Int {
-        return model.roomDatas.value?.size ?: 0
+        return array.size
     }
 
     override fun onBindViewHolder(holder: RoomListViewHolder, position: Int) {
-        val data = model.roomDatas.value ?: return
-        if (data.size > position) {
-            holder.textView.text = data[position].name
+        if (array.size > position) {
+            Timber.d(array[position].name)
+            holder.textView.text = array[position].name
         }
     }
 
