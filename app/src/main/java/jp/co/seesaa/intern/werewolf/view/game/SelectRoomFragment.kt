@@ -26,6 +26,10 @@ class SelectRoomFragment : Fragment() {
         super.onCreateView(inflater, container, savedInstanceState)
         val binding = DataBindingUtil.inflate<FragmentSelectRoomBinding>(inflater, R.layout.fragment_select_room, container, false)
         binding.model = this.model
+        val context = this.context
+        if (context != null) {
+            binding.rooms.adapter = RoomListAdapter(context, this.model)
+        }
         return binding.root
     }
 }
