@@ -64,4 +64,9 @@ dependencies {
     // Preference Fragment
     implementation "com.android.support:preference-v7:$supportLibraryVersion"
     implementation "com.android.support:preference-v14:$supportLibraryVersion"
+
+    //AlertView
+    implementation 'com.bigkoo:alertview:1.0.3'
+
+    implementation 'com.android.support:support-annotations:27.1.1'
 }

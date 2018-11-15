@@ -1,4 +1,4 @@
-package jp.co.seesaa.intern.werewolf.view
+package jp.co.seesaa.intern.werewolf.view.main
 
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter

@@ -1,4 +1,4 @@
-package jp.co.seesaa.intern.werewolf.view
+package jp.co.seesaa.intern.werewolf.view.main
 
 import android.databinding.BindingAdapter
 import android.widget.ImageView

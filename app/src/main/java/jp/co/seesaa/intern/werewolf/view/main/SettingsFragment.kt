@@ -1,4 +1,4 @@
-package jp.co.seesaa.intern.werewolf.view
+package jp.co.seesaa.intern.werewolf.view.main
 
 import android.os.Bundle
 import android.support.v7.preference.PreferenceFragmentCompat

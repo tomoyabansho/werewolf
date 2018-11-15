@@ -1,4 +1,4 @@
-package jp.co.seesaa.intern.werewolf.view
+package jp.co.seesaa.intern.werewolf.view.main
 
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
