@@ -4,7 +4,7 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 import timber.log.Timber
 
-class MainActivityPagerAdapter(fm: FragmentManager, val titles: Array<String>) : FragmentPagerAdapter(fm) {
+class MainActivityPagerAdapter(fm: FragmentManager, private val titles: List<String>) : FragmentPagerAdapter(fm) {
     private val PAGENUM = 3
 
     override fun getPageTitle(position: Int): CharSequence? {
@@ -12,9 +12,9 @@ class MainActivityPagerAdapter(fm: FragmentManager, val titles: Array<String>) :
     }
 
     override fun getItem(position: Int) = when (position) {
-        0 -> NewsFragment()
-        1 -> StatusFragment()
-        2 -> SettingsFragment()
+        0 -> NewsFragment.newInstance()
+        1 -> StatusFragment.newInstance()
+        2 -> SettingsFragment.newInstance()
         else -> {
             Timber.d("unreachable value: $position")
             null
