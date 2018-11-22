@@ -4,7 +4,6 @@ import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,17 +13,22 @@ import jp.co.seesaa.intern.werewolf.databinding.FragmentStatusBinding
 import jp.co.seesaa.intern.werewolf.model.main.StatusModel
 
 class StatusFragment : Fragment() {
-    lateinit var model: StatusModel
+    private lateinit var model: StatusModel
+
+    companion object {
+        fun newInstance() = StatusFragment()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val activity = this.activity as FragmentActivity
-        this.model = ViewModelProviders.of(activity).get(StatusModel::class.java)
-        this.model.data.postValue(UserData(getString(R.string.preference_test_id), getString(R.string.preference_test_name), 5, 2, 3))
+        model = ViewModelProviders.of(requireActivity()).get(StatusModel::class.java)
+        model.data.postValue(UserData(getString(R.string.preference_test_id), getString(R.string.preference_test_name), 5, 2, 3))
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
+        FragmentStatusBinding.inflate(inflater, container, false)
         val binding = DataBindingUtil.inflate<FragmentStatusBinding>(inflater, R.layout.fragment_status, container, false)
 
         binding.setLifecycleOwner(this)

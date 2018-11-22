@@ -18,6 +18,10 @@ class NewsFragment : Fragment() {
 
     private lateinit var model: NewsModel
 
+    companion object {
+        fun newInstance() = NewsFragment()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
